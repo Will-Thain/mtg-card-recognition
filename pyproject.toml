@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtg-card-recognition"
+version = "0.2.0"
+description = "MTG card zone extraction, FAISS embeddings, evidence gating, and strict verification."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+authors = [{ name = "EbayWorkflows contributors" }]
+keywords = ["mtg", "magic-the-gathering", "ocr", "computer-vision", "faiss"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+  "faiss-cpu",
+  "httpx",
+  "numpy",
+  "opencv-python",
+  "open-clip-torch",
+  "pillow",
+  "pytesseract",
+  "rapidfuzz",
+  "torch",
+]
+
+[project.optional-dependencies]
+gpu = ["torch-directml"]
+dev = ["pytest", "ruff"]
+
+[project.urls]
+Homepage = "https://github.com/your-org/mtg-card-recognition"
+Documentation = "https://github.com/your-org/mtg-card-recognition#readme"
+Repository = "https://github.com/your-org/mtg-card-recognition"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

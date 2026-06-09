@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "verified-01-prm",
+      "path": "examples/verified-01-prm/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "mir",
+      "expected_collector": "272",
+      "expected_name": "Goblin Tinkerer",
+      "notes": "Visual audit: Goblin Tinkerer (Mirage). DB wrongly verified Flooded Strand PRM via set_symbol @ 0.99; name_ocr=OO."
+    },
+    {
+      "id": "verified-02-tfic",
+      "path": "examples/verified-02-tfic/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "tfic",
+      "expected_collector": "3",
+      "expected_name": "Spirit",
+      "notes": "Visual audit: blurry red foil creature; DB verified via set_symbol only; name_ocr=i. Gate must not price on symbol alone."
+    },
+    {
+      "id": "verified-03-30a",
+      "path": "examples/verified-03-30a/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "dom",
+      "expected_collector": "43",
+      "expected_name": "Academy Drake",
+      "notes": "Visual audit: Academy Drake (Dominaria). DB wrongly verified Purelace 30A via set_symbol @ 0.97; name_ocr=a."
+    },
+    {
+      "id": "title-single-01",
+      "path": "examples/title-single-01/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "vow",
+      "expected_collector": "300",
+      "expected_name": "Alluring Suitor // Deadly Dancer",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "title-single-02",
+      "path": "examples/title-single-02/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "fin",
+      "expected_collector": "514",
+      "expected_name": "Vivi Ornitier",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "title-single-03",
+      "path": "examples/title-single-03/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "opc2",
+      "expected_collector": "16",
+      "expected_name": "Glen Elendra",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "title-single-04",
+      "path": "examples/title-single-04/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "fic",
+      "expected_collector": "215",
+      "expected_name": "Y'shtola, Night's Blessed",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "title-single-05",
+      "path": "examples/title-single-05/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "tdrc",
+      "expected_collector": "14",
+      "expected_name": "Golem",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "title-single-06",
+      "path": "examples/title-single-06/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "tvow",
+      "expected_collector": "18",
+      "expected_name": "Treasure",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "title-single-07",
+      "path": "examples/title-single-07/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "te01",
+      "expected_collector": "3",
+      "expected_name": "Horror",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "title-single-08",
+      "path": "examples/title-single-08/region.jpg",
+      "verify_expect": "fail",
+      "expected_set": "spm",
+      "expected_collector": "205",
+      "expected_name": "Spider-Man 2099",
+      "notes": "Title match only; strict gate should not verify without zone evidence."
+    },
+    {
+      "id": "proposal-heavy-001",
+      "path": "examples/proposal-heavy-001/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 66 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-002",
+      "path": "examples/proposal-heavy-002/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 66 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-003",
+      "path": "examples/proposal-heavy-003/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 43 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-004",
+      "path": "examples/proposal-heavy-004/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 43 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-005",
+      "path": "examples/proposal-heavy-005/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 43 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-006",
+      "path": "examples/proposal-heavy-006/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 43 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-007",
+      "path": "examples/proposal-heavy-007/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 42 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-008",
+      "path": "examples/proposal-heavy-008/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 42 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-009",
+      "path": "examples/proposal-heavy-009/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 40 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-010",
+      "path": "examples/proposal-heavy-010/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 40 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-011",
+      "path": "examples/proposal-heavy-011/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 39 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "proposal-heavy-012",
+      "path": "examples/proposal-heavy-012/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Listing has 39 candidates; panel v2 caps (\u22642/region, \u22645/listing) apply here."
+    },
+    {
+      "id": "fs-has-bottom-zone-001",
+      "path": "examples/fs-has-bottom-zone-001/region.jpg",
+      "verify_expect": "pass",
+      "expected_set": "inv",
+      "expected_collector": "201",
+      "expected_name": "Magnigoth Treefolk",
+      "notes": "Visual audit: old-frame Invasion Magnigoth Treefolk; bottom strip 201/350 parseable with old layout."
+    },
+    {
+      "id": "fs-bulk-multi-region-002",
+      "path": "examples/fs-bulk-multi-region-002/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bulk lot region; proposal cap stress. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-bottom-zone-003",
+      "path": "examples/fs-has-bottom-zone-003/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bottom strip crop present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-bottom-zone-004",
+      "path": "examples/fs-has-bottom-zone-004/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bottom strip crop present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-bulk-multi-region-005",
+      "path": "examples/fs-bulk-multi-region-005/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bulk lot region; proposal cap stress. No ground-truth printing label."
+    },
+    {
+      "id": "fs-bulk-multi-region-006",
+      "path": "examples/fs-bulk-multi-region-006/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bulk lot region; proposal cap stress. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-bottom-zone-007",
+      "path": "examples/fs-has-bottom-zone-007/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bottom strip crop present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-bottom-zone-008",
+      "path": "examples/fs-has-bottom-zone-008/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bottom strip crop present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-bulk-multi-region-009",
+      "path": "examples/fs-bulk-multi-region-009/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bulk lot region; proposal cap stress. No ground-truth printing label."
+    },
+    {
+      "id": "fs-bulk-multi-region-010",
+      "path": "examples/fs-bulk-multi-region-010/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bulk lot region; proposal cap stress. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-bottom-zone-011",
+      "path": "examples/fs-has-bottom-zone-011/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bottom strip crop present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-bottom-zone-012",
+      "path": "examples/fs-has-bottom-zone-012/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bottom strip crop present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-symbol-zone-013",
+      "path": "examples/fs-has-symbol-zone-013/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Set symbol zone present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-symbol-zone-014",
+      "path": "examples/fs-has-symbol-zone-014/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Set symbol zone present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-bulk-multi-region-015",
+      "path": "examples/fs-bulk-multi-region-015/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bulk lot region; proposal cap stress. No ground-truth printing label."
+    },
+    {
+      "id": "fs-bulk-multi-region-016",
+      "path": "examples/fs-bulk-multi-region-016/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Bulk lot region; proposal cap stress. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-symbol-zone-017",
+      "path": "examples/fs-has-symbol-zone-017/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Set symbol zone present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-symbol-zone-018",
+      "path": "examples/fs-has-symbol-zone-018/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Set symbol zone present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-symbol-zone-019",
+      "path": "examples/fs-has-symbol-zone-019/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Set symbol zone present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-symbol-zone-020",
+      "path": "examples/fs-has-symbol-zone-020/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Set symbol zone present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-has-symbol-zone-021",
+      "path": "examples/fs-has-symbol-zone-021/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Set symbol zone present. No ground-truth printing label."
+    },
+    {
+      "id": "fs-rich-zones-022",
+      "path": "examples/fs-rich-zones-022/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Full modern zone set. No ground-truth printing label."
+    },
+    {
+      "id": "fs-rich-zones-023",
+      "path": "examples/fs-rich-zones-023/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Full modern zone set. No ground-truth printing label."
+    },
+    {
+      "id": "fs-rich-zones-024",
+      "path": "examples/fs-rich-zones-024/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Full modern zone set. No ground-truth printing label."
+    },
+    {
+      "id": "fs-rich-zones-025",
+      "path": "examples/fs-rich-zones-025/region.jpg",
+      "verify_expect": "fail",
+      "notes": "Filesystem sample: Full modern zone set. No ground-truth printing label."
+    }
+  ]
+}

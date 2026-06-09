@@ -1,0 +1,51 @@
+"""Embedding helpers (OpenCLIP + FAISS)."""
+
+from .faiss_index import (
+    EmbeddingMatch,
+    build_index_from_printings,
+    clear_faiss_index_cache,
+    embed_art_paths,
+    excluded_scryfall_ids,
+    faiss_index_crop_mode,
+    index_exists,
+    indexed_scryfall_ids,
+    load_index_meta,
+    prepare_art_paths,
+    search_similar_cards,
+    append_skipped_ids,
+    skipped_scryfall_ids,
+    write_faiss_index,
+)
+from .openclip import (
+    OpenClipRuntime,
+    clear_openclip_runtime_cache,
+    embed_image_file,
+    embed_image_paths,
+    get_openclip_runtime,
+    normalize_torch_device,
+    resolve_torch_device,
+)
+
+__all__ = [
+    "EmbeddingMatch",
+    "OpenClipRuntime",
+    "build_index_from_printings",
+    "clear_faiss_index_cache",
+    "clear_openclip_runtime_cache",
+    "embed_art_paths",
+    "embed_image_file",
+    "embed_image_paths",
+    "excluded_scryfall_ids",
+    "faiss_index_crop_mode",
+    "get_openclip_runtime",
+    "index_exists",
+    "indexed_scryfall_ids",
+    "load_index_meta",
+    "normalize_torch_device",
+    "prepare_art_paths",
+    "resolve_torch_device",
+    "append_skipped_ids",
+    "search_similar_cards",
+    "skipped_scryfall_ids",
+    "write_faiss_index",
+]

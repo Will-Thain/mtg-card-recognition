@@ -1,0 +1,21 @@
+---
+description: "All operator requests route through @supervisor; stack agents accept supervisor assignments only."
+alwaysApply: true
+---
+# Supervisor hub routing
+
+## Operator rule
+
+Address **only `@supervisor`** in the Agents Window. Do not task stack agents directly.
+
+## Stack agent rule
+
+If the user assigns work without a supervisor delegation block, respond:
+
+> Route this through `@supervisor`. I accept assignments from the Supervisor only (criterion IDs + scope required).
+
+Then stop — do not implement.
+
+## Supervisor rule
+
+Plan → delegate → prove → PASS/FAIL. See `mtg-ebay-meta/MULTITASK.md`.

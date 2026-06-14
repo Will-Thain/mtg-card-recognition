@@ -2,6 +2,14 @@
 
 This program is built by **concurrent Cursor agents** under a **Supervisor**. Human operators intervene on escalation only.
 
+## Single entry point
+
+**Address only `@supervisor`** in the Agents Window. The Supervisor routes work to stack agents via `/multitask` or Task subagents, then runs proofs.
+
+Do **not** task `@agent-docs-platform`, `@agent-python-workflows`, `@agent-python-recognition`, or `@agent-vercel` directly.
+
+Delegation blocks: **`MULTITASK.md`** in this folder.
+
 ## Law
 
 1. **`conformance/manifest.yaml`** in `mtg-ebay-docs` is authoritative over informal chat.
@@ -22,26 +30,20 @@ This program is built by **concurrent Cursor agents** under a **Supervisor**. Hu
 
 | Invoke | Role |
 |--------|------|
-| `@supervisor` | Pass/fail checkpoints, assign work, run proofs |
-| `@agent-docs-platform` | MDX, manifest, schemas |
-| `@agent-python-workflows` | Consumer pipeline |
-| `@agent-python-recognition` | Cascade library |
-| `@agent-vercel` | Next.js API, Blob, deploy |
+| `@supervisor` | **Only operator entry point** — plan, delegate, prove, PASS/FAIL |
+| `@agent-docs-platform` | MDX, manifest, schemas (supervisor-assigned) |
+| `@agent-python-workflows` | Consumer pipeline (supervisor-assigned) |
+| `@agent-python-recognition` | Cascade library (supervisor-assigned) |
+| `@agent-vercel` | Next.js API, Blob, deploy (supervisor-assigned) |
 
 ## Cursor rules
 
-Project rules live in `.cursor/rules/` (installed via `new_project_docs/scripts/bootstrap-cursor-rules.ps1` from [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules) + `mtg-*.mdc` templates). See planning doc `11-cursor-rules-bootstrap.md`.
+Project rules live in `.cursor/rules/` including **`mtg-supervisor-hub.mdc`** (always on). See planning doc `11-cursor-rules-bootstrap.md`.
 
-## Before you code
+## Stack agents: before you claim done
 
-1. Read criterion `doc_ref` in manifest for your task.
-2. Confirm file ownership in `06-cursor-agent-orchestration.md`.
-3. Implement minimal diff for that criterion only.
-
-## Before you claim done
-
-1. Run proof command from manifest entry.
-2. Notify `@supervisor` with criterion IDs and command output.
+1. Run proof command from manifest entry for your criterion IDs.
+2. Report back to **`@supervisor`** with criterion IDs and command output — not to the human directly.
 
 ## Planning docs source
 

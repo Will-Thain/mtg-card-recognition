@@ -1,0 +1,25 @@
+{
+  "cards": [
+    {
+      "printing_id": "b875e878-a0d6-43d1-a5dd-efccfac8a4d6",
+      "name": "Flooded Strand",
+      "set_code": "prm",
+      "collector_number": "1",
+      "embedding": [0.12, 0.34, 0.56, 0.78]
+    },
+    {
+      "printing_id": "004f2ea4-0477-49b2-ad06-5aac7991103d",
+      "name": "Spirit",
+      "set_code": "tfic",
+      "collector_number": "3",
+      "embedding": [0.21, 0.43, 0.65, 0.87]
+    },
+    {
+      "printing_id": "31d7c215-5481-49bd-9c58-83eb76a92a56",
+      "name": "Purelace",
+      "set_code": "30a",
+      "collector_number": "1",
+      "embedding": [0.09, 0.18, 0.27, 0.36]
+    }
+  ]
+}

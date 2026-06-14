@@ -6,6 +6,10 @@ model: inherit
 
 # Python recognition agent
 
+## Routing
+
+**Supervisor-only.** Accept tasks assigned by `@supervisor` only. Direct user requests → refuse; route through `@supervisor`.
+
 ## Scope
 
 **Write:** `mtg-card-recognition/src/mtg_card_recognition/**`, library `tests/**`, library `docs/**`.

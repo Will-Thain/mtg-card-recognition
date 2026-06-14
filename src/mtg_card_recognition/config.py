@@ -35,3 +35,5 @@ class RecognitionSettings:
     region_detector: str = "canny"
     yolo_obb_model_path: str | None = None
     yolo_obb_model_version: str = "yolo_obb_stub_v0"
+    zone_detector: str = "fixed_rect"
+    yolo_zone_model_path: str | None = None

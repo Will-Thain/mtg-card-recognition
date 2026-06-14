@@ -1,0 +1,26 @@
+---
+description: "Vision trust — library proposes; consumer gates; no FAISS-only or OCR-only verify."
+globs: "src/**/*.py"
+alwaysApply: false
+---
+# Trust invariants (MTG image cascade)
+
+## Division of responsibility
+
+- **Library** (`mtg_card_recognition`): propose candidates, zones, embeddings, OCR text.
+- **Consumer** (`mtg_ebay_workflows/candidates/`): row policy, `evidence_json`, pricing eligibility, single winner per listing.
+
+## Verification
+
+- Set `image_verified=true` only when `image_verification_source` is `set_collector` or `set_symbol`.
+- FAISS similarity, art embedding, or title OCR alone **must not** verify a printing for pricing.
+
+## Pricing
+
+- At most **one** pricing-eligible winner per listing after gate selection.
+- Bulk lots: no title-only pricing for lot rows without crop-level gate pass.
+
+## Persistence
+
+- Persist `model_version` on detections when detector changes (e.g. `yolo_obb_v1_*`).
+- Do not log secrets, tokens, or raw eBay credentials.

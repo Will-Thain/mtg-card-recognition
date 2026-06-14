@@ -1,0 +1,35 @@
+---
+description: "MTG eBay greenfield — conformance manifest is authoritative; checkpoint proofs required before merge."
+globs: "**/*"
+alwaysApply: false
+---
+# Spec-conformance program rules
+
+## Authority order
+
+1. `conformance/manifest.yaml` in **mtg-ebay-docs** (criterion IDs `CHK-M*`, `CHK-YOLO-*`)
+2. `doc_ref` pages cited by each criterion
+3. This rule file and stack-specific rules
+4. Informal chat instructions
+
+## Before implementing
+
+- Find the criterion ID for your task in `manifest.yaml`.
+- Read `doc_ref` before editing code.
+- Implement the **minimal** diff for that criterion only.
+
+## Before claiming done
+
+- Run the criterion `proof.command` from the manifest.
+- Emit or update `artifacts/conformance-report.json` on failure.
+- Notify `@supervisor` with criterion IDs and command output.
+
+## Supervisor gate
+
+No merge to `main` or `mvp-N/*` integration branch when any **required** criterion for the active checkpoint is red.
+
+## Cross-repo
+
+- Docs repo owns manifest + JSON schemas.
+- Workflows repo owns consumer row policy and stage executors.
+- Recognition repo owns library propose path only — no Postgres, no eBay API code.

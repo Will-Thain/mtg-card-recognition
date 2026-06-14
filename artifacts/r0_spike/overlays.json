@@ -1,0 +1,55 @@
+{
+  "mode": "smoke-holdout",
+  "detector": "cardcaptor_obb_stub",
+  "holdout_eval_ids": [
+    "r0_spike_001",
+    "r0_spike_002"
+  ],
+  "images_processed": 2,
+  "overlays": [
+    {
+      "eval_id": "r0_spike_001",
+      "file": "holdout_001.jpg",
+      "holdout": true,
+      "detector": "cardcaptor_obb_stub",
+      "detections": [
+        {
+          "obb": [
+            4.0,
+            4.0,
+            28.0,
+            4.0,
+            28.0,
+            44.0,
+            4.0,
+            44.0
+          ],
+          "label": "card",
+          "confidence": 0.88
+        }
+      ]
+    },
+    {
+      "eval_id": "r0_spike_002",
+      "file": "holdout_002.jpg",
+      "holdout": true,
+      "detector": "cardcaptor_obb_stub",
+      "detections": [
+        {
+          "obb": [
+            4.0,
+            4.0,
+            28.0,
+            4.0,
+            28.0,
+            44.0,
+            4.0,
+            44.0
+          ],
+          "label": "card",
+          "confidence": 0.88
+        }
+      ]
+    }
+  ]
+}

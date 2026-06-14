@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "holdout_eval_ids": ["r0_spike_001", "r0_spike_002"],
+  "compare_eval_ids": ["r0_spike_003"],
+  "images": [
+    {
+      "eval_id": "r0_spike_001",
+      "file": "holdout_001.jpg",
+      "holdout": true
+    },
+    {
+      "eval_id": "r0_spike_002",
+      "file": "holdout_002.jpg",
+      "holdout": true
+    },
+    {
+      "eval_id": "r0_spike_003",
+      "file": "train_001.jpg",
+      "holdout": false
+    }
+  ],
+  "ground_truth": {
+    "r0_spike_003": [
+      {
+        "obb": [4.0, 4.0, 28.0, 4.0, 28.0, 44.0, 4.0, 44.0],
+        "label": "card"
+      }
+    ]
+  }
+}

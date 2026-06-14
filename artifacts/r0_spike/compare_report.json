@@ -1,0 +1,26 @@
+{
+  "baseline": "canny",
+  "candidate_detector": "yolo_obb_stub",
+  "eval_ids_compared": [
+    "r0_spike_003"
+  ],
+  "false_positives": 1,
+  "false_negatives": 0,
+  "per_image": [
+    {
+      "eval_id": "r0_spike_003",
+      "file": "train_001.jpg",
+      "baseline": {
+        "detector": "canny_stub",
+        "false_positives": 1,
+        "false_negatives": 0
+      },
+      "candidate": {
+        "detector": "yolo_obb_stub",
+        "false_positives": 0,
+        "false_negatives": 0
+      }
+    }
+  ],
+  "note": "Stub spike report on synthetic fixtures; not production cache images."
+}

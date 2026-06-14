@@ -14,6 +14,9 @@ dev = [
     "pytest",
     "ruff",
 ]
+obb = [
+    "onnxruntime>=1.17",
+]
 
 [build-system]
 requires = ["hatchling"]

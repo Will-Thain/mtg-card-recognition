@@ -32,3 +32,6 @@ class RecognitionSettings:
     torch_device: str = "cpu"
     openclip_model_name: str = "ViT-B-32"
     embedding_batch_size: int = 32
+    region_detector: str = "canny"
+    yolo_obb_model_path: str | None = None
+    yolo_obb_model_version: str = "yolo_obb_stub_v0"

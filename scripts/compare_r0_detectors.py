@@ -90,6 +90,40 @@ def run_compare(baseline: str, manifest_path: Path, output_path: Path) -> int:
     return 0
 
 
+def run_yolo_gate(manifest_path: Path, gate: str) -> int:
+    """Evaluate stub YOLO OBB against ground truth for P1 eval gates."""
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    by_id = image_by_eval_id(manifest)
+    compare_ids: list[str] = manifest.get("compare_eval_ids", [])
+    ground_truth: dict[str, list[dict[str, Any]]] = manifest.get("ground_truth", {})
+
+    total_fp = 0
+    total_fn = 0
+    images = max(len(compare_ids), 1)
+
+    for eval_id in compare_ids:
+        record = by_id[eval_id]
+        image_path = FIXTURE_DIR / record["file"]
+        truth = ground_truth.get(eval_id, [])
+        preds = stub_yolo_obb_detector(image_path)
+        fp, fn = count_fp_fn(preds, truth)
+        total_fp += fp
+        total_fn += fn
+
+    recall = 1.0 - (total_fn / max(sum(len(ground_truth.get(i, [])) for i in compare_ids), 1))
+    mean_fp = total_fp / images
+
+    if gate == "recall" and recall < 0.95:
+        print(json.dumps({"recall": recall, "status": "fail"}))
+        return 1
+    if gate == "fp" and mean_fp > 0.5:
+        print(json.dumps({"mean_fp": mean_fp, "status": "fail"}))
+        return 1
+
+    print(json.dumps({"recall": recall, "mean_fp": mean_fp, "status": "pass"}))
+    return 0
+
+
 def main() -> int:
     """CLI entrypoint."""
     parser = argparse.ArgumentParser(description=__doc__)
@@ -97,6 +131,16 @@ def main() -> int:
         "--baseline",
         choices=["canny"],
         help="Baseline detector for comparison (CHK-YOLO-P0-02)",
+    )
+    parser.add_argument(
+        "--detector",
+        choices=["yolo_obb"],
+        help="Candidate detector for eval gates (CHK-YOLO-P1-04/05)",
+    )
+    parser.add_argument(
+        "--gate",
+        choices=["recall", "fp"],
+        help="Eval gate to enforce on stub fixtures",
     )
     parser.add_argument(
         "--manifest",
@@ -111,6 +155,9 @@ def main() -> int:
         help="Output compare report JSON path",
     )
     args = parser.parse_args()
+
+    if args.detector == "yolo_obb" and args.gate:
+        return run_yolo_gate(args.manifest, args.gate)
 
     if args.baseline is None:
         print("Specify --baseline canny", file=sys.stderr)

@@ -43,11 +43,17 @@ def build_index(fixture_path: Path, output_path: Path) -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     faiss.write_index(index, str(output_path))
 
+    resolved_fixture = fixture_path.resolve()
+    try:
+        source_fixture = str(resolved_fixture.relative_to(ROOT.resolve()))
+    except ValueError:
+        source_fixture = str(resolved_fixture)
+
     meta = {
         "printing_ids": [str(card["printing_id"]) for card in cards],
         "dim": dimension,
         "count": len(cards),
-        "source_fixture": str(fixture_path.relative_to(ROOT)),
+        "source_fixture": source_fixture,
     }
     meta_path = Path(f"{output_path}.meta.json")
     meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
